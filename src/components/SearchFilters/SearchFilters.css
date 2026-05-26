@@ -1,0 +1,191 @@
+.search-filters {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 16px;
+
+  width: 100%;
+}
+
+.input-container,
+.select-container {
+  position: relative;
+
+  flex: 1 1 260px;
+
+  min-width: 0;
+}
+
+.input-icon {
+  position: absolute;
+
+  left: 14px;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: #1B5E20;
+
+  font-size: 14px;
+
+  pointer-events: none;
+
+  opacity: 0.85;
+}
+
+.input-container input,
+.select-container select {
+  width: 100%;
+
+  height: 52px;
+
+  padding: 0 16px 0 44px;
+
+  border: 2px solid #DADADA;
+
+  border-radius: 16px;
+
+  background: #FFFFFF;
+
+  color: #1E293B;
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+
+  appearance: none;
+}
+
+.input-container input::placeholder {
+  color: #94A3B8;
+}
+
+.input-container input:hover,
+.select-container select:hover {
+  border-color: #2E7D32;
+}
+
+.input-container input:focus,
+.select-container select:focus {
+  outline: none;
+
+  border-color: #F9A825;
+
+  box-shadow:
+    0 0 0 4px rgba(249,168,37,0.18);
+}
+
+.disabled-select {
+  opacity: 0.65;
+
+  cursor: not-allowed;
+
+  background: #F5F5F5 !important;
+}
+
+.clear-filters-btn {
+  height: 52px;
+
+  border: none;
+
+  border-radius: 16px;
+
+  padding: 0 20px;
+
+  background: #C62828;
+
+  color: #FFFFFF;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+
+  box-shadow:
+    0 8px 20px rgba(198,40,40,0.20);
+}
+
+.clear-filters-btn:hover {
+  background: #B71C1C;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 24px rgba(198,40,40,0.28);
+}
+
+.clear-filters-btn:active {
+  transform: scale(0.97);
+}
+
+.clear-filters-btn svg {
+  font-size: 13px;
+}
+
+@media (max-width: 992px) {
+
+  .search-filters {
+    gap: 14px;
+  }
+
+  .input-container,
+  .select-container {
+    flex: 1 1 calc(50% - 14px);
+  }
+
+  .clear-filters-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+
+  .search-filters {
+    flex-direction: column;
+
+    gap: 12px;
+  }
+
+  .input-container,
+  .select-container {
+    width: 100%;
+  }
+
+  .input-container input,
+  .select-container select {
+    height: 50px;
+
+    font-size: 14px;
+  }
+
+  .clear-filters-btn {
+    width: 100%;
+
+    height: 50px;
+
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,195 @@
+:root {
+  --navbar-height: 76px;
+}
+
+.navbar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: var(--navbar-height);
+
+  z-index: 5000;
+
+  display: flex;
+  align-items: center;
+
+  background: rgba(255,255,255,0.88);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+
+  box-shadow:
+    0 4px 18px rgba(0,0,0,0.04);
+}
+
+.navbar-content {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 0 20px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.navbar-logo {
+  text-decoration: none;
+
+  font-size: clamp(26px, 4vw, 34px);
+
+  font-weight: 900;
+
+  letter-spacing: -1px;
+
+  flex-shrink: 0;
+
+  line-height: 1;
+}
+
+.logo-in {
+  color: #16351F;
+}
+
+.logo-genio {
+  color: #FBC02D;
+}
+
+.navbar-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  flex-shrink: 0;
+}
+
+.navbar-links a {
+  text-decoration: none;
+
+  color: #334155;
+
+  font-weight: 600;
+
+  font-size: 15px;
+
+  padding: 10px 14px;
+
+  border-radius: 12px;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.navbar-links a:hover {
+  background: rgba(27,94,32,0.08);
+
+  color: #1B5E20;
+}
+
+.navbar-links button {
+  border: none;
+
+  background:
+    linear-gradient(
+      135deg,
+      #1B5E20 0%,
+      #2E7D32 100%
+    );
+
+  color: white;
+
+  padding: 10px 18px;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+  box-shadow:
+    0 8px 18px rgba(27,94,32,0.18);
+}
+
+.navbar-links button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 22px rgba(27,94,32,0.22);
+}
+
+@media (max-width: 768px) {
+
+  :root {
+    --navbar-height: 70px;
+  }
+
+  .navbar-content {
+    padding: 0 14px;
+  }
+
+  .navbar-logo {
+    font-size: 28px;
+  }
+
+  .navbar-links {
+    gap: 4px;
+  }
+
+  .navbar-links a {
+    padding: 8px 10px;
+
+    font-size: 13px;
+  }
+
+  .navbar-links button {
+    padding: 8px 12px;
+
+    font-size: 13px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .navbar-content {
+    gap: 10px;
+  }
+
+  .navbar-links {
+    gap: 2px;
+  }
+
+  .navbar-links a {
+    padding: 6px 8px;
+
+    font-size: 12px;
+  }
+
+  .navbar-links button {
+    padding: 7px 10px;
+
+    font-size: 12px;
+  }
+
+}

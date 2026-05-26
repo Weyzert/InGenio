@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background: #f5f5f5;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app {
+  width: 100%;
   min-height: 100vh;
+  padding: 30px;
+}
+
+.topo {
+  margin-bottom: 30px;
+}
+
+.topo h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #222;
+}
+
+.filtros {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.filtros input,
+.filtros select {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  min-width: 280px;
+  font-size: 15px;
+}
+
+.listaPerfis {
   display: flex;
   flex-direction: column;
+  gap: 20px;
+}
+
+.cardPerfil {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
 }
 
-.App-link {
-  color: #61dafb;
+.fotoPerfil {
+  width: 120px;
+  height: 120px;
+  border-radius: 12px;
+  object-fit: cover;
+  background: #ddd;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.conteudoPerfil {
+  flex: 1;
+}
+
+.conteudoPerfil h2 {
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.talentos {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.tagTalento {
+  background: #e7f0ff;
+  color: #0057cc;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+}
+
+.descricao {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.localizacao {
+  color: #777;
+  font-size: 14px;
 }
